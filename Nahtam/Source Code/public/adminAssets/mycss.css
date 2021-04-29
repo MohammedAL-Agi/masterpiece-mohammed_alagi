@@ -1,0 +1,23 @@
+.image img {
+    width: 70px;
+}
+
+.myColor {
+    background-color: #214d63;
+    color: #fcdb02;
+}
+
+.custom_image {
+    width: 100%;
+    height: 250px;
+}
+.pro_image {
+    width: 100%;
+    height: 250px;
+}
+
+.links {
+    position: relative;
+    top: 2rem;
+    left: 1.5rem;
+}
