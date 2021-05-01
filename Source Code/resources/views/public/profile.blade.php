@@ -139,20 +139,6 @@
 											<td>$ {{ $order["order"]->total_price }}</td>
 										</tr>
 										@endforeach
-
-										{{-- <tr>
-											<td colspan="3" class="subtableCon">
-												<table class="subtable">
-													<tr>
-														<th>Summary</th>
-														<td>Order id :{{ $order["order"]->id }}</td>
-														<td>Date:{{ Str::substr($order["order"]->created_at,0, 16)  }}</td>
-														<td>Status: {{ $order["order"]->status  }}</td>
-														<td>Total Price: {{ $order["order"]->total_price  }} JOD</td>
-													</tr>
-												</table>
-											</td>
-										</tr> --}}
 									</tbody>
 								</table>
 								@endforeach

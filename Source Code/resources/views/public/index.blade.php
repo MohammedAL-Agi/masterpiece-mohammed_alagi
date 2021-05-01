@@ -57,7 +57,6 @@
           <div class="col-md-5">
             <div class="section-title mb-0">
              <h2 class="title">Explore all the categories that we provide for you.</h2>
-             <p class="mb-0">Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones. Although each is successful separately, the right most powerful motivational.</p>
             </div>
           </div>
           <div class="col-md-7">
@@ -66,7 +65,7 @@
                 @foreach ($Categories as $category)
                     <div class="item">
                         <div class="category-style-01">
-                            <img class="img-fluid custom_image " src="{{asset("images/".$category->image)}}" alt="">
+                            <img class="img-fluid custom_image " src="{{asset("images/".$category->image)}}" alt="{{ $category->name }}">
                             <a href="shop/{{$category->id}}" class="category-contant">
                                 <h5>{{ $category->name }}</h5>
                             </a>
@@ -82,13 +81,71 @@
     <!--=================================
     category -->
 
+ <!--=================================
+About -->
+<section class="space-pt bg-overlay-left mb-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<img class="img-fluid b-radius" src="{{ asset('/assetss/images/about/about-03.jpg')}}" alt="">
+			</div>
+			<div class="col-lg-6">
+				<div class="section-contant">
+				<div class="section-title">
+					<h2 class="title">We think your loved ones justify the very best care.</h2>
+{{--					<h6>Connect with our team if you and find the one that’s right for your baby.</h6>--}}
+					<p>Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones. Although each is successful separately, the right combination of both is the most powerful motivational force known to humankind.</p>
+				</div>
+				<div class="row mb-3 mb-md-5">
+					<div class="col-md-6">
+						<div class="list">
+							<ul>
+								<li><i class="far fa-circle"></i> Company And Business Setup</li>
+								<li><i class="far fa-circle"></i> Taxation Advisory</li>
+								<li><i class="far fa-circle"></i> Tax Planning Preparation</li>
+								<li><i class="far fa-circle"></i> Accounting Outsourcing</li>
+								<li><i class="far fa-circle"></i> Investment Management</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						 <div class="list">
+							<ul>
+								<li><i class="far fa-circle"></i> Payroll Outsourcing</li>
+								<li><i class="far fa-circle"></i> Company Management</li>
+								<li><i class="far fa-circle"></i> Acquisitions Consulting</li>
+								<li><i class="far fa-circle"></i> Wealth Management</li>
+								<li><i class="far fa-circle"></i> Private Placement Consulting</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mt-3">
+						<div class="author-signature">
+							<img class="img-fluid" src="{{ asset('/assetss/images/about/signature.jpg')}}" alt="">
+						</div>
+					</div>
+					<div class="col-md-6 mt-3">
+						<h6 class="author-name">Mohammed Alagi</h6>
+						<span class="author-designation">CEO & Founder</span>
+					</div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+</section>
+<!--=================================
+About -->
+
 
 <!--=================================
 banner -->
 <h2 class="text-center" >Featured products</h2>
 <div class="d-flex flex-wrap justify-content-center container mt-5 mb-5 ">
 	@foreach ($FeaturedProducts as $product)
-	<div class="col-md-3 mb-4">
+	<div class="col-sm-3 mb-4">
 		<div class="product ">
 			 <div class="product-image">
 					<img class="img-fluid custom_image" src="{{asset('images/'.$product->image)}}" alt="{{$product->name}}">
@@ -99,9 +156,9 @@ banner -->
 					</div>
 					<div class="product-price">
             @if($product->discount != 0 )
-				<del>${{$product->price}}</del> <ins>${{round(($product->price)-(($product->discount/100)*($product->price)))}}</ins>
+				<del>${{$product->price}}</del> <h5><ins>${{round(($product->price)-(($product->discount/100)*($product->price)))}}</ins></h5>
             @else
-                <ins>${{$product->price}}</ins>
+                <h5><ins>${{$product->price}}</ins></h5>
 		        @endif
 					</div>
 			</div>
@@ -117,7 +174,7 @@ banner -->
           <div class="col-lg-6">
             <div class="space-ptb">
             <div class="section-title">
-              <h2 class="text-white">Excellent Senior Care for Extraordinary Families</h2>
+              <h2 class="text-white">Excellent Senior supplies for Extraordinary Families</h2>
             </div>
             <ul class="list-unstyled mb-4 mb-lg-0">
               <li class="text-white mb-3 d-flex"> <i class="fas fa-check-circle font-xl text-primary mr-3"></i> Give yourself the power of responsibility. Remind yourself the only thing stopping you is yourself.</li>
@@ -133,72 +190,122 @@ banner -->
         </div>
       </div>
     </section>
+
     <!--=================================
-    Challenge-->
-{{--        <section class="space-pb">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-lg-12">--}}
-{{--                        <div class="title mb-5">--}}
-{{--                            <h4>Hot Products</h4>--}}
-{{--                        </div>--}}
-{{--                        <div class="owl-carousel" data-nav-dots="false" data-nav-arrow="false" data-items="4" data-sm-items="2" data-lg-items="3" data-md-items="3" data-xs-items="2" data-autoplay="false">--}}
-{{--                            @foreach ($HotProducts as $product)--}}
-{{--                                <div class="item">--}}
-{{--                                    <div class="product">--}}
-{{--                                        <div class="product-image">--}}
-{{--                                            <img class="img-fluid pro_image mx-auto" src="{{asset("images/". $product->image)}}" alt="product Image">--}}
-{{--                                        </div>--}}
-{{--                                        <div class="product-description">--}}
-{{--                                            <div class="product-title">--}}
-{{--                                                <a href="{{asset('product/'.$product->id)}}" >{{$product->name}}</a>--}}
-{{--                                            </div>--}}
-
-{{--                                            <div class="product-price">--}}
-{{--                                                @if($product->discount != 0 )--}}
-{{--                                                    <del>${{$product->price}}</del> <ins>${{round(($product->price)-(($product->discount/100)*($product->price)))}}</ins>--}}
-{{--                                                @else--}}
-{{--                                                    <ins>${{$product->price}}</ins>--}}
-{{--                                                @endif--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            @endforeach--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
-
-        <div class="owl-carousel owl-nav-bottom-center mt-5" data-nav-dots="false" data-nav-arrow="false" data-items="4" data-lg-items="2" data-md-items="2" data-sm-items="2" data-xs-items="2"  data-space="30" data-autoheight="true">
-            @foreach ($HotProducts as $product)
-                <div class="item">
-                    <div class="product-description">
-                        <img class="img-fluid custom_image " src="{{asset("images/".$product->image)}}" alt="product Image">
-                    </div>
-                    <div class="product-title">
-                        <a href="{{asset('product/'.$product->id)}}" >{{$product->name}}</a>
-                    </div>
-                    <div class="product-price">
-                        @if($product->discount != 0 )
-                            <del>${{$product->price}}</del> <ins>${{round(($product->price)-(($product->discount/100)*($product->price)))}}</ins>
-                        @else
-                            <ins>${{$product->price}}</ins>
-                        @endif
+    Testimonial -->
+        <section class="space-pt space-sm-pb container" >
+            <div class="container">
+                <div class="row m-0 justify-content-center">
+                    <div class="col-md-12">
+                        <div
+                            class="owl-carousel testimonial-center owl-nav-bottom-center"
+                            data-nav-arrow="true"
+                            data-items="1"
+                            data-md-items="1"
+                            data-sm-items="1"
+                            data-xs-items="1"
+                            data-xx-items="1"
+                            data-space="0"
+                            data-autoheight="true"
+                        >
+                            <div class="item">
+                                <div class="testimonial">
+                                    <div class="avatar avatar-lg">
+                                        <img
+                                            class="img-fluid"
+                                            src="/assetss/images/avatar/zoubie.png"
+                                            alt="Profile picture"
+                                        />
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-quote">
+                                            <i class="flaticon-left-quote"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            Excellent Customer support! These
+                                            guys reply within minutes sometimes
+                                            and really help you with when you
+                                            need them. The theme itself is very
+                                            extended as well. Happy with my
+                                            purchase!
+                                        </div>
+                                        <div class="testimonial-name">
+                                            <h6>Mohammed Alzoubi</h6>
+                                            <span class="text-muted">- Customer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial">
+                                    <div class="avatar avatar-lg">
+                                        <img
+                                            class="img-fluid"
+                                            src="/assetss/images/avatar/Anas.jpg"
+                                            alt="Profile picture"
+                                        />
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-quote">
+                                            <i class="flaticon-left-quote"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            I had a few things I needed help
+                                            with on this theme... Their customer
+                                            service was amazing and helped me
+                                            out many times. One of the complete
+                                            themes with different requirements.
+                                        </div>
+                                        <div class="testimonial-name">
+                                            <h6>Anas Jawa</h6>
+                                            <span class="text-muted">- CTO</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial">
+                                    <div class="avatar avatar-lg">
+                                        <img
+                                            class="img-fluid"
+                                            src="/assetss/images/avatar/suhibe.png"
+                                            alt="Profile picture"
+                                        />
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-quote">
+                                            <i class="flaticon-left-quote"></i>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            One of the most complete service
+                                            here the best of the best. Thanks a lot for such great
+                                            features, products, feeling and home
+                                            variations. And the best of all,
+                                            great introductions prices.
+                                        </div>
+                                        <div class="testimonial-name">
+                                            <h6>Suhieb Alabed</h6>
+                                            <span class="text-muted">- Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            @endforeach
-        </div>
+            </div>
+        </section>
+        <!--=================================
+    Testimonial -->
 
         <script>
             document.title = "Nahtam | Home";
             document.getElementsByTagName(
                 "META"
-            )[1].content = `Nahtam, Care, Elderly care, Old men, Therapists, equipments, Supplies, products`;
+            )[1].content = `Nahtam, Care, Elderly care, Old men, Therapists, equipments, Supplies, products, Hospital`;
             document.getElementsByTagName(
                 "META"
-            )[2].content = "This page is the home page for Nahtam site it shows the features for all the website ";
+            )[2].content = "This page is the home page for Nahtam site it shows the features for all the website and the hottest products";
         </script>
 
 @endsection

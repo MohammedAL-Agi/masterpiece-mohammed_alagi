@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::redirect('/', '/admin');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['isLogin', 'customAuth']], function () {
-    Route::redirect('/', '/admin/orders');
+    Route::redirect('/', '/admin/index');
     Route::resource('admin', 'AdminController');
     Route::resource('category', 'CategoryController');
     Route::resource('products', 'ProductsController');
@@ -28,6 +28,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['isLogin',
     Route::delete('blogs/{id}', "BlogController@destroy")->name('deleteBlog');
     Route::get('blogs/{id}/{status}', 'BlogController@changeStatus');
     Route::get('contacts', 'ContactController@AdminIndex');
+    Route::get('index', 'AdminIndexController@index');
 });
 
 // ======================

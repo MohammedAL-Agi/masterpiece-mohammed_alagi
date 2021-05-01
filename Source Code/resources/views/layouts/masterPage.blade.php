@@ -146,7 +146,7 @@
                   <h5 class="text-primary">About Us</h5>
                   <p class="text-white">
                       It's something we think about from the time our feet hit the Legos® on the floor, until after
-                      we've tucked the kids in at night. We know that the child care struggle is real, because we're parents too.
+                      we've tucked the kids in at night. We know that the Elderly care struggle is real, because we're human too.
                   </p>
               </div>
           </div>
@@ -177,9 +177,9 @@
                   <h5 class="text-primary">Contact Information</h5>
                   <p class="text-white">Give yourself the power of responsibility. Remind yourself the only thing stopping you is yourself.</p>
                   <ul class="list-unstyled mb-0" style="background-image: url({{asset('assetss/images/google-map.png')}});">
-                      <li><i class="fa fa-map-signs"></i><span>594 E. Whitemarsh Street Mchenry, IL 60050</span></li>
-                      <li><i class="fa fa-microphone"></i><span>(123) 345-6789</span></li>
-                      <li><i class="fa fa-headphones"></i><span>support@sitters.com</span></li>
+                      <li><i class="fa fa-map-signs"></i><span>594 E. Alnuzha Street Amman, IL 60050</span></li>
+                      <li><i class="fa fa-microphone"></i><span>(+962) 7788-72380</span></li>
+                      <li><i class="fa fa-headphones"></i><span>support@Nahtam.com</span></li>
                   </ul>
               </div>
 
@@ -190,13 +190,13 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-5 text-center text-md-left">
-              <a href="index-2.html"><img class="img-fluid footer-logo" src="{{ asset('assetss/images/logo-light-nahtam.svg')}}" alt=""></a>
+              <a href="{{asset('/')}}"><img class="img-fluid footer-logo" src="{{ asset('assetss/images/logo-light-nahtam.svg')}}" alt=""></a>
             </div>
             <div class="col-md-2 text-center my-3 mt-md-0 mb-md-0">
               <a id="back-to-top" class="back-to-top" href="#"><i class="fas fa-angle-up"></i></a>
             </div>
             <div class="col-md-5 text-center copyright text-md-right">
-              <p class="mb-0 text-white"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="index-2.html"> Sitters </a> All Rights Reserved</p>
+              <p class="mb-0 text-white"> &copy; Copyright <span id="copyright"> <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> <a href="{{asset('/')}}"> Nahtam </a> All Rights Reserved</p>
             </div>
           </div>
         </div>

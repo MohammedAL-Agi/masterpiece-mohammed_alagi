@@ -1,6 +1,6 @@
 @extends('layouts.pagesLayout')
 @section('content')
-    -<div class="blog_area pt-105 pb-100">
+    <div class="blog_area pt-105 pb-100">
         <div class="container">
             <h2>Add Blog</h2>
             <form action="" method="post" enctype="multipart/form-data">
@@ -28,8 +28,6 @@
                 </div>
 
                     <button class="btn btn-primary mb-5" type="submit">Add Blog</button>
-                    {{-- <input type="submit" value="Add Blog"> --}}
-
             </form>
         </div>
         <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>

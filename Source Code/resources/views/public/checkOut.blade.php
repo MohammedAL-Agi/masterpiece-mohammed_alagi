@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col-sm-12 ">
             <ol class="breadcrumb mb-0 p-0">
-              <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{asset('/')}}">Home</a></li>
               <li class="breadcrumb-item active">Checkout</li>
             </ol>
             <h2 class="inner-banner-title">Checkout</h2>
@@ -56,7 +56,7 @@
                     <div class="form-group col-sm-12">
                       <label>Name</label>
                     <p>  <strong>{{$customer->name}}</strong></p>
-                      
+
                     </div>
 										<div class="form-group col-md-6">
 											<label>Email</label>
@@ -87,7 +87,7 @@
 										</div>
                 </div>
           </div>
-          
+
           <div class="col-md-6 mt-5 mt-md-0">
                 <div class="section-title">
                   <h3 class="title">Your Order</h3>
@@ -96,7 +96,7 @@
                   <div class="table-responsive">
                     <table class="table cart">
                       <tbody>
-                        
+
                         <tr>
                           <th class="border-top-0 product-name" scope="row">Product</th>
                           <th class="border-top-0 product-total" scope="row">Price</th>
@@ -107,11 +107,11 @@
                           <td> $ {{$item["product"]->price}} </td>
                         </tr>
                         @endforeach
-                        
+
                       </tbody>
                       <tfoot>
                         <tr>
-                          <th class="shipping">Shipping</th>
+                          <th class="shipping">Payment</th>
                           <td>
                             <p>Cash On Delivery</p>
                         </td>
@@ -123,7 +123,7 @@
                       </tfoot>
                     </table>
                   </div>
-                
+
                   <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our<a href="#"> privacy policy.</a></p>
                   <div class="custom-control custom-checkbox my-4">
                     <input type="checkbox" class="custom-control-input" onclick="show()" id="agree">
@@ -150,7 +150,7 @@
 
           }
         }
-        
+
       document.title = "Nahtam | Check Out";
       document.getElementsByTagName(
           "META"
@@ -158,7 +158,7 @@
       document.getElementsByTagName(
           "META"
       )[2].content = "This page is the Check Out page for Nahtam site it let the user continue the payment process.";
-  
+
       </script>
 
 @endsection

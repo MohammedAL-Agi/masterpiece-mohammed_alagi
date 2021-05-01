@@ -12,7 +12,7 @@ class AdminController extends Controller
     {
         $admins = Admin::all();
 
-        return view('admin.index', compact('admins'));
+        return view('admin.admin', compact('admins'));
     }
 
     public function store(Request $request)

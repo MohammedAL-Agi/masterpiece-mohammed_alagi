@@ -12,7 +12,7 @@ class ShowPublicController extends Controller
     public function index()
     {
         $Categories = Category::all();
-        $FeaturedProducts = Product::limit(12)->get();
+        $FeaturedProducts = Product::limit(8)-> get();
         $HotProducts = Product::where('discount', '!=', '0')->limit(9)->orderBy("discount", "desc")->get();
         return view('public.index', compact('FeaturedProducts', 'Categories', 'HotProducts'));
     }

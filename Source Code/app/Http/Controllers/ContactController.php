@@ -36,7 +36,7 @@ class ContactController extends Controller
         $contact->email   = $request->input('email');
         $contact->message = $request->input('message');
         $contact->save();
-        alert()->success('Thank You', 'Your message has been submited!');
+        alert()->success('Thank You', 'Your message has been submitted!');
 
         return back()->with('success', 'Your message sent successfully.');
     }

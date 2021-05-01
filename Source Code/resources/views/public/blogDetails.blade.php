@@ -44,6 +44,13 @@
                 </div>
               </div>
               <!-- Search -->
+              <div class="widget">
+                <div class="widget-title">
+                </div>
+                <div class="widget-categories">
+               <img src="/images/orange.jpg" alt="Advertisement">
+                </div>
+              </div>
             </div>
           </div>
           <!-- Blog Sidebar -->
@@ -82,8 +89,7 @@
                         <div class="reviews">
                           <p class="meta">
                             <strong>{{ $comment->name }} </strong>{{Str::substr($comment->created_at, 0, 10)}}
-                          </p>
-
+                          </p>  
                         </div>
                         <p>{{ $comment->comment }}</p>
                       </div>
