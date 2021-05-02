@@ -69,9 +69,6 @@
                 <a class="nav-link {{ Request::path() == 'admin/orders' ? 'active' : ''}}"  href="{{asset('/admin/orders')}}"><i class="fas fa-calendar-alt mb-2"></i>Manage Orders
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link {{ Request::path() == 'admin/blogs' ? 'active' : ''}}"  href="{{asset('/admin/blogs')}}"><i class="fab fa-blogger ml-1 mb-2"></i>Manage Blogs
-                </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link {{ Request::path() == 'admin/admin' ? 'active' : ''}}"  href="{{asset('/admin/admin')}}"><i class="fa fa-fw fa-user-circle mb-2"></i>Manage Admins

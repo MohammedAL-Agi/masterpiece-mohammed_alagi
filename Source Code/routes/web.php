@@ -23,10 +23,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['isLogin',
     Route::resource('Customer', 'CustomerController');
     Route::get('orders', 'OrdersController@index');
     Route::get('orders/{id}/{status}', 'OrdersController@changeStatus');
-    Route::get('blogs', 'BlogController@adminIndex');
-    Route::get('blogs/view/{id}', 'BlogController@view');
-    Route::delete('blogs/{id}', "BlogController@destroy")->name('deleteBlog');
-    Route::get('blogs/{id}/{status}', 'BlogController@changeStatus');
     Route::get('contacts', 'ContactController@AdminIndex');
     Route::get('index', 'AdminIndexController@index');
 });
@@ -73,24 +69,9 @@ Route::get('login', function () {
     return view('public.register');
 });
 
-// Route::get('404', function () {
-//     return view('public.404');
-// });
-
-// =================
-Route::get('blogDetails', function () {
-    return view('public.blogDetails');
+Route::get('404', function () {
+    return view('public.404');
 });
-Route::get('blog', "BlogController@index");
-Route::get('blog/add', function () {
-    return view('public.addBlog');
-});
-
-Route::post('blog/add', "BlogController@add");
-Route::post('blog/addComment', "BlogController@addComment");
-Route::post('blog/search', "BlogController@search")->name('blogSearch');
-Route::get('blog/{id}', "BlogController@blogDetails");
-// ===================
 
 Route::get('/contact', "ContactController@index");
 Route::post('/contact', "ContactController@create");

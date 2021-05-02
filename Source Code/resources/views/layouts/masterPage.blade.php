@@ -72,11 +72,10 @@
                 </div>
                 <div class="social d-inline-block">
                   <ul class="list-unstyled">
-                    <li><a href="#"> <i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"> <i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"> <i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="#"> <i class="fab fa-pinterest"></i></a></li>
-                    <li><a href="#"> <i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://web.facebook.com/profile.php?id=100006109893924"> <i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/Alagi4real"> <i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/mohammed-alagi/"> <i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/alagi4real/"> <i class="fab fa-instagram"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -98,9 +97,6 @@
               </li>
               <li class="dropdown nav-item {{ Request::path() == 'shop' ? 'active' : ''}}">
                 <a class="nav-link" href="{{asset('shop')}}">Shop</a>
-              </li>
-              <li class="dropdown nav-item {{ Request::path() == 'blog' ? 'active' : ''}}">
-                <a class="nav-link" href="{{asset('blog')}}">Blog</a>
               </li>
               <li class="dropdown nav-item {{ Request::path() == 'about' ? 'active' : ''}}">
                 <a class="nav-link" href="{{asset('about')}}" >About</a>
@@ -166,7 +162,6 @@
                   <h5 class="text-primary">Useful Links</h5>
                   <ul class="list-unstyled mb-0">
                       <li><a href="{{asset('shop')}}">Shop</a></li>
-                      <li><a href="{{asset('blog')}}">Blog</a></li>
                       <li><a href="{{asset('about')}}">About Us </a></li>
                       <li><a href="{{asset('contact')}}">Contact Us</a></li>
                   </ul>

@@ -62,9 +62,6 @@
               <li class="dropdown nav-item {{ Request::path() == 'shop' ? 'active' : ''}}">
                 <a class="nav-link" href="{{asset('shop')}}">Shop</a>
               </li>
-              <li class="dropdown nav-item {{ Request::path() == 'blog' ? 'active' : ''}}">
-                <a class="nav-link" href="{{asset('blog')}}">Blog</a>
-              </li>
               <li class="dropdown nav-item {{ Request::path() == 'about' ? 'active' : ''}}">
                 <a class="nav-link" href="{{asset('about')}}" >About</a>
               </li>
@@ -141,7 +138,6 @@
                   <h5 class="text-primary">Useful Links</h5>
                   <ul class="list-unstyled mb-0">
                       <li><a href="{{asset('shop')}}">Shop</a></li>
-                      <li><a href="{{asset('blog')}}">Blog</a></li>
                       <li><a href="{{asset('about')}}">About Us </a></li>
                       <li><a href="{{asset('contact')}}">Contact Us</a></li>
                   </ul>

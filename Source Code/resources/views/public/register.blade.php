@@ -50,11 +50,11 @@
                     <p class="text-danger">{{ $errors->first('email') }}</p>
                     @enderror
                   </div>
+                  <div class="form-group col-sm-12">
                     <label>Password:</label>
-                  <div class="form-group d-flex col-sm-12">
                       <input name="password" id="myInput" type="password" class="form-control">
-                      <i onclick="showPassword()" id="eye" class="fas fa-eye fa-2x align-self-center " aria-hidden="true" style="cursor: pointer;"></i>
-                  </div>
+                      {{-- <i onclick="showPassword()" id="eye" class="fas fa-eye fa-2x align-self-center " aria-hidden="true" style="cursor: pointer;"></i> --}}
+                    </div>
                     @error('password')
                     <p class="text-danger">{{ $errors->first('password') }}</p>
                     @enderror
@@ -84,12 +84,12 @@
                     <label>Password:</label>
                   <div class="form-group d-flex col-sm-12">
                       <input name="password" id="registerInput" type="password"  class="form-control">
-                      <i onclick="showPassword()" class="fas fa-eye fa-2x align-self-center" style="cursor: pointer;"></i>
+                      {{-- <i onclick="showPassword()" class="fas fa-eye fa-2x align-self-center" style="cursor: pointer;"></i> --}}
                   </div>
                     @error('password')
                     <p class="text-danger">{{ $errors->first('password') }}</p>
                     @enderror
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 ">
                     <button type="submit" class="btn btn-primary btn-block">Sign up</button>
                   </div>
                 </form>
